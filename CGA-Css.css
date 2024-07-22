@@ -1,0 +1,506 @@
+/* Global Styles */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    color: #333;
+}
+
+/* Header Styles */
+header {
+    background: #2e8b57; /* Dark green background */
+    color: #fff;
+    padding: 10px 0;
+}
+
+.container {
+    width: 80%;
+    margin: 0 auto;
+    overflow: hidden;
+}
+
+.logo-container {
+    float: left;
+}
+
+.logo {
+    height: 60px;
+}
+
+.menu-toggle {
+    display: none;
+    float: right;
+    cursor: pointer;
+}
+
+.menu-toggle .bar {
+    display: block;
+    width: 25px;
+    height: 3px;
+    margin: 5px auto;
+    -webkit-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+    background-color: #fff;
+}
+
+nav {
+    float: right;
+}
+
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+nav ul li {
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+nav ul li a:hover {
+    color: #dbe5d3; /* Light green for hover effect */
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .container {
+        width: 90%;
+    }
+
+    .logo-container,
+    nav {
+        float: none;
+        text-align: center;
+    }
+
+    .menu-toggle {
+        display: block;
+    }
+
+    nav {
+        display: none;
+        width: 100%;
+    }
+
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    nav ul li {
+        margin: 10px 0;
+    }
+
+    nav.active {
+        display: block;
+    }
+}
+
+/* Hero Section */
+.hero {
+    height: 500px; /* Adjust height as needed */
+    background: linear-gradient(90deg, 
+                red, orange, yellow, green, 
+                cyan, blue, violet, red); /* Rainbow gradient */
+    background-size: 1400% 1400%;
+    animation: rainbowAnimation 15s ease infinite;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    text-align: center;
+    position: relative;
+}
+
+.hero-content {
+    position: absolute;
+    z-index: 1;
+}
+
+.hero h1 {
+    font-size: 3em;
+    margin: 0;
+}
+
+.hero p {
+    font-size: 1.5em;
+    margin: 10px 0;
+}
+
+.btn-primary {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #2e8b57; /* Dark green background */
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    margin-top: 20px;
+    transition: background-color 0.3s;
+}
+
+.btn-primary:hover {
+    background-color: #1e6f44; /* Darker green for hover */
+}
+
+/* About Section */
+.about {
+    padding: 40px 0;
+    text-align: center;
+    background: #eaf0e6; /* Light green background */
+}
+
+.about h2 {
+    font-size: 2.5em;
+    margin-bottom: 20px;
+}
+
+.about p {
+    font-size: 1.2em;
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+
+.btn-secondary {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #2e8b57; /* Dark green background */
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+.btn-secondary:hover {
+    background-color: #1e6f44; /* Darker green for hover */
+}
+
+/* Features Section */
+.features {
+    display: flex;
+    justify-content: space-around;
+    padding: 40px 0;
+    background: #ffffff; /* White background for features section */
+}
+
+.feature {
+    flex: 1;
+    margin: 0 15px;
+    text-align: center;
+}
+
+.feature img {
+    width: 10%;
+    height: auto;
+    border-radius: 8px;
+    text-align: center;
+}
+
+.feature h3 {
+    margin: 10px 0;
+}
+
+.feature p {
+    font-size: 1em;
+    line-height: 1.5;
+}
+
+/* Call-to-Action Section */
+.cta {
+    padding: 40px 0;
+    text-align: center;
+    background: #d0f0c0; /* Light green background */
+}
+
+.cta h2 {
+    font-size: 2.5em;
+    margin-bottom: 10px;
+}
+
+.cta p {
+    font-size: 1.2em;
+    margin-bottom: 20px;
+    line-height: 1.6;
+}
+
+/* Footer Styles */
+footer {
+    background: #2e8b57; /* Dark green background */
+    color: #fff;
+    padding: 40px 0;
+}
+
+footer .container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+footer .footer-top {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+footer .footer-logo {
+    width: 100px; /* Adjust size as needed */
+    height: auto;
+    margin-bottom: 10px;
+}
+
+footer .footer-top p {
+    margin: 0;
+}
+
+footer .footer-info {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+footer .footer-info div {
+    flex: 1;
+    margin: 10px;
+    min-width: 200px; /* Ensures each section has a minimum width */
+}
+
+footer .footer-info h3 {
+    margin-top: 0;
+}
+
+footer .footer-contact p {
+    margin: 5px 0;
+}
+
+footer .footer-contact a {
+    color: #fff;
+    text-decoration: none;
+}
+
+footer .footer-contact a:hover {
+    text-decoration: underline;
+}
+
+footer .footer-quick-links ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+footer .footer-quick-links ul li {
+    margin: 5px 0;
+}
+
+footer .footer-quick-links ul li a {
+    color: #fff;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+footer .footer-quick-links ul li a:hover {
+    color: #dbe5d3; /* Light green for hover effect */
+}
+
+footer .footer-newsletter form {
+    display: flex;
+    flex-direction: column;
+}
+
+footer .footer-newsletter input[type="email"] {
+    padding: 10px;
+    margin-bottom: 10px;
+    border: none;
+    border-radius: 5px;
+    width: 100%;
+}
+
+footer .footer-newsletter button {
+    padding: 10px;
+    background-color: #2e8b57; /* Dark green background */
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    width: 100%;
+    transition: background-color 0.3s;
+}
+
+footer .footer-newsletter button:hover {
+    background-color: #1e6f44; /* Darker green for hover */
+}
+
+footer .footer-bottom {
+    width: 100%;
+    text-align: center;
+}
+
+footer .footer-nav {
+    margin: 10px 0;
+}
+
+footer .footer-nav ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    gap: 15px;
+    justify-content: center;
+}
+
+footer .footer-nav ul li {
+    display: inline;
+}
+
+footer .footer-nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+footer .footer-nav ul li a:hover {
+    color: #dbe5d3; /* Light green for hover effect */
+}
+
+footer .social-media {
+    margin: 10px 0;
+}
+
+footer .social-icon {
+    display: inline-block;
+    margin: 0 10px;
+}
+
+footer .social-icon img {
+    width: 24px; /* Adjust size as needed */
+    height: auto;
+}
+
+footer .social-icon:hover {
+    opacity: 0.8; /* Slightly dim on hover */
+}
+
+/* student portal login page */
+
+/* Login and Dashboard Styles */
+.login, .dashboard {
+    padding: 20px 0;
+    text-align: center;
+}
+
+.login form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 400px;
+    margin: 0 auto;
+}
+
+.login label {
+    margin-top: 10px;
+}
+
+.login input {
+    margin-top: 5px;
+    padding: 10px;
+    width: 100%;
+    max-width: 300px;
+}
+
+.login button {
+    margin-top: 20px;
+    padding: 10px 20px;
+    background-color: #2c3e50;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+.error-message {
+    color: red;
+}
+
+.dashboard {
+    text-align: center;
+}
+
+.dashboard button {
+    margin-top: 20px;
+    padding: 10px 20px;
+    background-color: #e74c3c;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+.login, .dashboard-container {
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    max-width: 400px;
+    margin: 50px auto;
+}
+
+/* Staff portal login container */
+
+/* Main Content Styles */
+main {
+    padding: 20px;
+    text-align: center;
+}
+
+.login-container, .dashboard-container {
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    max-width: 400px;
+    margin: 50px auto;
+}
+
+h2 {
+    margin-top: 0;
+}
+
+.form-group {
+    margin-bottom: 15px;
+    text-align: left;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+.form-group input {
+    width: 100%;
+    padding: 10px;
+    box-sizing: border-box;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+button {
+    background-color: #004d40;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+button:hover {
+    background-color: #333;
+}
